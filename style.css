@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Tiktok Sans'
+}
+
+header{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    background-color: #101010;
+    justify-content: space-between;
+}
+
+
+.logo{
+    height: 100%;   
+}
+
+.logo h1{
+    color: rgb(255, 255, 255);
+    height: 100%; 
+    font-weight: 200;
+    
+}
+
+.logo h1 span{
+    font-weight: 800;
+}
+
+.logo h1, span{
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    font-family: 'Ballet';
+}
+.inner_header{
+    width: 65%;
+    height: 100%;
+    /* margin: 0 auto; */
+    background-color: #101010;
+    display: flex;
+}
+
+.nav{
+    display: flex;  
+    height: 100%;
+    justify-content: center;
+}
+
+.nav a{
+    height: 100%;
+    padding: 0px 20px;
+}
+
+.nav a li{
+    height: 100%;
+    display: flex;
+    color: white;
+    font-family: 'Tiktok Sans';
+    font-size: 16px;
+    align-items: center;
+}
+
+
+
+img{
+    max-width: 25rem;
+}
+
+main{
+
+}
+
+.intro{
+    display: block;
+    height: 100px;
+    width: 90%;
+    text-align: center;
+    margin-top: 3rem;
+    font-family: 'Tiktok Sans';
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    border-color: rgb(95, 95, 95);
+    padding-bottom: 3rem ;
+    margin-bottom: 1rem;
+    justify-self: center;
+}
+
+
+
+.intro h1{
+    font-weight: 450;
+}
+
+.intro h2{
+    font-weight: 450;
+}
+
+.intro p{
+    font-style:italic;
+}
+
+.intro2{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+    border-bottom: 1px rgb(95, 95, 95) solid;
+    padding: 1rem;
+    width: 88%; 
+    justify-self: center;
+}
+
+.intro2 .avatar{
+    display: flex;
+}
+
+.intro2 .text{
+    background-color: #ffffff;
+    color: #101010;
+    /*border-radius: 3px;
+    border-color: #101010;
+    border-style: solid;
+    border-width: 2px;*/
+    width: 50%;
+}
+
+.intro2 .text img{
+    width: 5rem;
+    padding: 1rem;
+}
+
+.intro2 .text span{
+    font-family: 'Tiktok Sans';
+    font-weight: 600;
+}
+.intro2 .text p{
+    width: min-content;
+    margin: 1rem;
+    padding-top: 1rem;
+    border-top: 1px #101010 solid;
+    
+}
+
+.intro2 .scenery img{
+    width: 15rem;
+}
+footer{
+    background-color: #101010;
+    color: rgb(215, 215, 215);
+    font-family: 'Tiktok Sans';
+    padding-bottom: 2%;
+    
+}
+address{
+    padding-top: 1rem;
+    padding-left: 5rem;
+    width: 50%;
+    font-style: normal;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+address h2{
+    color: #ffffff;
+}
+
+address p{
+    font-weight: 100;
+}
+
+#cr{
+    font-size: x-small;
+    padding-top: 10%;
+}
+.websiteinfo h2{
+    display: flex;
+    font-family: 'Ballet';
+    padding-bottom: 1rem;
+}
+
+.scenery{
+    padding:2rem;
+    width: 25rem;
+}
+
+.slider_wrapper{
+    position: relative;
+    max-width: 10rem;
+    margin:0 auto;
+
+}
+
+.slider{
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type : x mandatory;   
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+}
+
+.slider::-webkit-scrollbar{
+    display: none;
+}
+
+.slider img{
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
