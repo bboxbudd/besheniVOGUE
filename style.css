@@ -282,3 +282,11 @@ main {
   0% {transform:scale(1);}
   100% {transform:scale(1.05);}
 }
+
+video {
+    object-fit: contain;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    overflow-x: ;
+    overflow-y: ;
+}
