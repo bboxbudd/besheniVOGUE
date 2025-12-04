@@ -106,11 +106,10 @@ main {
   overflow:hidden;
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  background:#000;
+  background:#101010;
   color:#fff;
 }
 .hero-media {
-  min-height:360px;
   background:url("https://www.maisonmargiela.com/binaries/content/gallery/mm_04_fw23/eveningwear-fw23-hero.jpg") center/cover;
   animation:heroZoom 18s ease-in-out infinite alternate;
   transform-origin:center;
@@ -136,14 +135,16 @@ main {
 }
 .button {
   padding:12px 28px;
-  border:1px solid var(--accent-light);
+  border:2px solid black;
   text-transform:uppercase;
   letter-spacing:1px;
   font-size:12px;
+  color:#000;
 }
 .button.dark {
   background:var(--accent-light);
   color:#000;
+  border:none;
 }
 .section {
   margin-top:64px;
@@ -197,7 +198,7 @@ main {
   grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
   gap:32px;
   align-items:center;
-  margin-top:32px;
+  margin:32px;
 }
 .newsletter {
   border:1px solid var(--border);
@@ -235,7 +236,7 @@ main {
   margin-top:80px;
   padding:40px;
   border-top:1px solid var(--border);
-  background:#fff;
+  background:#101010;
 }
 .footer-grid {
   display:grid;
@@ -248,12 +249,20 @@ main {
   text-transform:uppercase;
   font-size:12px;
   letter-spacing:1px;
+  color:#d1d1d1;
 }
 .footer-grid a {
   color:var(--muted);
   display:block;
   margin-bottom:8px;
 }
+
+.footer-grid[data-page="women"] a {
+  color:white;
+  display:block;
+  margin-bottom:8px;
+}
+
 .reveal {
   opacity:0;
   transform:translateY(60px) scale(0.98);
@@ -282,3 +291,5 @@ main {
   0% {transform:scale(1);}
   100% {transform:scale(1.05);}
 }
+
+
