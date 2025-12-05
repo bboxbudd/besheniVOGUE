@@ -332,3 +332,11 @@ main {
 .images img{
   scroll-snap-align: center;
 }
+#shows{
+  background-image:url('https://i.pinimg.com/1200x/40/50/a4/4050a4e2f4cfac4f905735648d7f84fe.jpg');
+  color:#000000;
+}
+
+#shows h3{
+  font-size:xx-large
+}
