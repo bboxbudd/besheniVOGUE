@@ -310,3 +310,25 @@ main {
 .img-container{
   display: grid;grid-template-columns: repeat(auto-fit,minmax(220px,1fr));gap:24px;padding:24px;
 }
+
+.fragrances{
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type:x mandatory;
+  margin-right:40px;
+  
+}
+
+.fragrances img{
+  scroll-snap-align: center;
+}
+
+::-webkit-scrollbar-thumb{
+  background:black;
+}
+.images{
+  display: flex; overflow-x: scroll; scroll-behavior: smooth; scroll-snap-type: x mandatory;
+}
+.images img{
+  scroll-snap-align: center;
+}
