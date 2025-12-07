@@ -11,7 +11,7 @@
 }
 body {
   margin:0;
-  font-family:"Helvetica Neue",Arial,sans-serif;
+  font-family:"Radley";
   background:var(--bg);
   color:var(--text);
   line-height:1.5;
@@ -333,10 +333,13 @@ main {
   scroll-snap-align: center;
 }
 #shows{
-  background-image:url('https://i.pinimg.com/1200x/40/50/a4/4050a4e2f4cfac4f905735648d7f84fe.jpg');
+  background-image:url('https://cdn.qwenlm.ai/output/wV14g68da59c517b9754a000ea35c2a0e/t2i/8b7f5cac-3743-458e-a839-85005ddd9db4/1765094218.png?key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZV91c2VyX2lkIjoid1YxNGc2OGRhNTljNTE3Yjk3NTRhMDAwZWEzNWMyYTBlIiwicmVzb3VyY2VfaWQiOiIxNzY1MDk0MjE4IiwicmVzb3VyY2VfY2hhdF9pZCI6IjUyYjIyOGViLTExNGUtNDg0OS04YjI3LTdlMzAwOTUwODBkZCJ9.4ti-yRKoYPxhQ1-h16JrI6BacxejOMSySXSAAq-wrEE');
+  background-size: contain;
   color:#000000;
 }
 
 #shows h3{
-  font-size:xx-large
+  font-size:xx-large;
+  color: #000000;
 }
+
