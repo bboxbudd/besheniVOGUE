@@ -278,15 +278,14 @@ main {
   100% {transform:scale(1.05);}
 }
 
-
 .hero-unisex{
-  animation: lol 60s infinite;
+  animation: lol 30s infinite alternate;
   border-radius: 10px;
   margin-top:10px;
 }
 
 @keyframes lol {
-  to {background-position: 1000% 0;}
+  to {background-position: 200% 0;}
 }
 
 .tabi{
