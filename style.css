@@ -87,6 +87,7 @@ img {
 .logo {
   font-size:22px;
   letter-spacing:2px;
+  font-weight: 500;
 }
 .nav-links {
   display:flex;
