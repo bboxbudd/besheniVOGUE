@@ -305,11 +305,36 @@ main {
 ::-webkit-scrollbar-thumb{
   background:black;
 }
+.images-container{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.scroll-btn{
+  border:1px solid #000;
+  background:rgba(255,255,255,0.85);
+  color:#000;
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  cursor:pointer;
+  transition:background 0.2s ease,color 0.2s ease;
+  flex-shrink:0;
+}
+.scroll-btn:hover{
+  background:#000;
+  color:#fff;
+}
 .images{
-  display: flex; overflow-x: scroll; scroll-behavior: smooth; scroll-snap-type: x mandatory;
+  display: flex; overflow-x: scroll; scroll-behavior: smooth; scroll-snap-type: x mandatory; flex:1;
+  scrollbar-width: none;
+}
+.images::-webkit-scrollbar{
+  display:none;
 }
 .images img{
   scroll-snap-align: center;
+  flex-shrink:0;
 }
 .video-frame{
   position:relative;

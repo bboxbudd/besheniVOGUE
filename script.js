@@ -89,3 +89,67 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+document.addEventListener('DOMContentLoaded', function () {
+  var containers = Array.prototype.slice.call(document.querySelectorAll('.images-container'));
+  if (!containers.length) return;
+  containers.forEach(function (wrap) {
+    var gallery = wrap.querySelector('.images');
+    var prev = wrap.querySelector('.scroll-btn.prev');
+    var next = wrap.querySelector('.scroll-btn.next');
+    if (!gallery || !prev || !next) return;
+    
+    var images = Array.prototype.slice.call(gallery.querySelectorAll('img'));
+    if (images.length < 2) return;
+    
+    var firstImg = images[0].cloneNode(true);
+    var lastImg = images[images.length - 1].cloneNode(true);
+    gallery.insertBefore(lastImg, images[0]);
+    gallery.appendChild(firstImg);
+    
+    var scrolling = false;
+    var amount = function () {
+      return Math.max(gallery.clientWidth * 0.8, 200);
+    };
+    
+    var scrollToReal = function () {
+      if (scrolling) return;
+      scrolling = true;
+      var scrollLeft = gallery.scrollLeft;
+      var scrollWidth = gallery.scrollWidth;
+      var clientWidth = gallery.clientWidth;
+      var firstImgWidth = lastImg.offsetWidth;
+      var lastImgWidth = firstImg.offsetWidth;
+      
+      if (scrollLeft < firstImgWidth) {
+        gallery.scrollTo({ left: scrollWidth - clientWidth - lastImgWidth, behavior: 'auto' });
+      } else if (scrollLeft > scrollWidth - clientWidth - lastImgWidth) {
+        gallery.scrollTo({ left: firstImgWidth, behavior: 'auto' });
+      }
+      scrolling = false;
+    };
+    
+    prev.addEventListener('click', function () {
+      var currentScroll = gallery.scrollLeft;
+      var firstImgWidth = lastImg.offsetWidth;
+      if (currentScroll <= firstImgWidth + 10) {
+        gallery.scrollLeft = gallery.scrollWidth - gallery.clientWidth;
+      }
+      gallery.scrollBy({ left: -amount(), behavior: 'smooth' });
+      setTimeout(scrollToReal, 300);
+    });
+    
+    next.addEventListener('click', function () {
+      var currentScroll = gallery.scrollLeft;
+      var scrollWidth = gallery.scrollWidth;
+      var clientWidth = gallery.clientWidth;
+      var lastImgWidth = firstImg.offsetWidth;
+      if (currentScroll >= scrollWidth - clientWidth - lastImgWidth - 10) {
+        gallery.scrollLeft = lastImg.offsetWidth;
+      }
+      gallery.scrollBy({ left: amount(), behavior: 'smooth' });
+      setTimeout(scrollToReal, 300);
+    });
+    
+    gallery.scrollLeft = lastImg.offsetWidth;
+  });
+});
