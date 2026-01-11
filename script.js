@@ -66,3 +66,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
 })
+document.addEventListener('DOMContentLoaded', function () {
+  var buttons = Array.prototype.slice.call(document.querySelectorAll('.fullscreen-btn'));
+  if (!buttons.length) return;
+  var enterFullscreen = function (el) {
+    if (el.requestFullscreen) return el.requestFullscreen();
+    if (el.webkitRequestFullscreen) return el.webkitRequestFullscreen();
+    if (el.msRequestFullscreen) return el.msRequestFullscreen();
+  };
+  buttons.forEach(function (btn) {
+    var video = btn.previousElementSibling;
+    if (!video || !video.classList.contains('show-video')) return;
+    video.muted = true;
+    btn.addEventListener('click', function () {
+      if (document.fullscreenElement || document.webkitFullscreenElement || document.msFullscreenElement) {
+        if (document.exitFullscreen) document.exitFullscreen();
+        else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+        else if (document.msExitFullscreen) document.msExitFullscreen();
+        return;
+      }
+      enterFullscreen(video);
+    });
+  });
+});

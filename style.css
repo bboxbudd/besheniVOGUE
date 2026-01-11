@@ -311,6 +311,31 @@ main {
 .images img{
   scroll-snap-align: center;
 }
+.video-frame{
+  position:relative;
+  max-width:100%;
+}
+.video-frame video{
+  width:100%;
+  border-radius:8px;
+  display:block;
+}
+.fullscreen-btn{
+  position:absolute;
+  right:12px;
+  bottom:12px;
+  padding:8px 12px;
+  background:rgba(0,0,0,0.7);
+  color:#fff;
+  border:none;
+  border-radius:4px;
+  cursor:pointer;
+  font-size:12px;
+  transition:background 0.2s ease;
+}
+.fullscreen-btn:hover{
+  background:rgba(0,0,0,0.9);
+}
 #shows{
   background-image:url('https://cdn.qwenlm.ai/output/wV14g68da59c517b9754a000ea35c2a0e/t2i/8b7f5cac-3743-458e-a839-85005ddd9db4/1765094218.png?key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZV91c2VyX2lkIjoid1YxNGc2OGRhNTljNTE3Yjk3NTRhMDAwZWEzNWMyYTBlIiwicmVzb3VyY2VfaWQiOiIxNzY1MDk0MjE4IiwicmVzb3VyY2VfY2hhdF9pZCI6IjUyYjIyOGViLTExNGUtNDg0OS04YjI3LTdlMzAwOTUwODBkZCJ9.4ti-yRKoYPxhQ1-h16JrI6BacxejOMSySXSAAq-wrEE');
   background-size: contain;
