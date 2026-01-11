@@ -11,7 +11,7 @@
 }
 body {
   margin:0;
-  font-family:"Radley";
+  font-family:"Tai Heritage Pro";
   background:var(--bg);
   color:var(--text);
   line-height:1.5;
@@ -195,10 +195,10 @@ main {
 }
 .split {
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
   gap:32px;
   align-items:center;
-  margin:32px;
+  margin:0px;
 }
 .newsletter {
   border:1px solid var(--border);
@@ -325,6 +325,7 @@ main {
   background:#000;
   color:#fff;
 }
+
 .images{
   display: flex; overflow-x: scroll; scroll-behavior: smooth; scroll-snap-type: x mandatory; flex:1;
   scrollbar-width: none;
@@ -452,5 +453,8 @@ main {
   }
   .hamburger {
         display: flex;
+    }
+    .scroll-btn{
+      display: none;
     }
 }
