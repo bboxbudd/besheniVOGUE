@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fashion World | Каталог</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tai+Heritage+Pro:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="announcement">Бесплатная доставка от 25 000 ₽ · Возврат 30 дней</div>
+  <header class="site-header">
+    <div class="logo">Fashion World</div>
+    <div class="header_links">
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="women.html">Women</a>
+        <a href="men.html">Men</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="shows.html">Shows</a>
+      </nav>
+    </div>
+    <div class="header-actions">
+      <a class="nav-profile" href="profile.html">Профиль</a>
+      <a href="cart.html">Корзина (<span data-cart-count>0</span>)</a>
+    </div>
+    <div class="hamburger" id="hamburger"><p>☰</p></div>
+  </header>
+  <div class="mobile-menu" id="mobileMenu">
+    <aside class="mobile-menu-content">
+      <a href="#" class="close-btn" id="closeMenu">&times;</a>
+      <a href="index.html">Home</a>
+      <a href="women.html">Women</a>
+      <a href="men.html">Men</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="shows.html">Shows</a>
+      <a class="nav-profile" href="profile.html">Профиль</a>
+      <a href="cart.html">Корзина</a>
+    </aside>
+  </div>
+
+  <main id="catalogPage">
+    <section class="section">
+      <div class="section-header">
+        <span>Каталог одежды</span>
+        <span class="muted">Фильтр по категории, размеру и цене</span>
+      </div>
+
+      <div class="filters-bar">
+        <label>
+          Поиск
+          <input type="search" id="catalogSearch" placeholder="Название товара">
+        </label>
+        <label>
+          Категория
+          <select id="filterCategory">
+            <option value="">Все</option>
+            <option value="outerwear">Верхняя одежда</option>
+            <option value="knitwear">Трикотаж</option>
+            <option value="bags">Сумки</option>
+            <option value="shoes">Обувь</option>
+          </select>
+        </label>
+        <label>
+          Размер
+          <select id="filterSize">
+            <option value="">Все</option>
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+            <option value="36">36</option>
+            <option value="38">38</option>
+            <option value="40">40</option>
+            <option value="42">42</option>
+          </select>
+        </label>
+        <label>
+          Цена
+          <select id="filterPrice">
+            <option value="">Любая</option>
+            <option value="low">до 30 000 ₽</option>
+            <option value="mid">30 000 – 60 000 ₽</option>
+            <option value="high">от 60 000 ₽</option>
+          </select>
+        </label>
+        <label>
+          Сортировка
+          <select id="sortPrice">
+            <option value="">По умолчанию</option>
+            <option value="asc">Сначала дешёвые</option>
+            <option value="desc">Сначала дорогие</option>
+          </select>
+        </label>
+        <button type="button" class="button" id="resetFilters">Сбросить фильтры</button>
+      </div>
+
+      <div class="product-grid" id="productGrid">
+        <article class="product-card" data-id="fw-01" data-name="Шерстяное пальто Envelope" data-price="78000" data-category="outerwear" data-sizes="XS,S,M,L" data-image="photos/hero-women.png">
+          <img src="https://www.maisonmargiela.com/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-margiela-master-catalog/default/dwb034b495/images/large/S51AM0514_M35046_119_F.jpg?sw=1024&q=80" alt="Пальто">
+          <div class="product-body">
+            <span>Верхняя одежда</span>
+            <h3>Шерстяное пальто Envelope</h3>
+            <p class="price">78 000 ₽</p>
+            <div class="product-sizes">
+              <button type="button" class="size-btn" data-size="XS">XS</button>
+              <button type="button" class="size-btn" data-size="S">S</button>
+              <button type="button" class="size-btn" data-size="M">M</button>
+              <button type="button" class="size-btn" data-size="L">L</button>
+            </div>
+            <button type="button" class="button add-to-cart-btn">В корзину</button>
+          </div>
+        </article>
+
+        <article class="product-card" data-id="fw-02" data-name="Кашемировый свитер Distressed" data-price="42000" data-category="knitwear" data-sizes="S,M,L,XL" data-image="">
+          <img src="https://www.maisonmargiela.com/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-margiela-master-catalog/default/dw6baf740a/images/large/S29HP0039_M13181_900_F.jpg?sw=1024&q=80" alt="Свитер">
+          <div class="product-body">
+            <span>Трикотаж</span>
+            <h3>Кашемировый свитер Distressed</h3>
+            <p class="price">42 000 ₽</p>
+            <div class="product-sizes">
+              <button type="button" class="size-btn" data-size="S">S</button>
+              <button type="button" class="size-btn" data-size="M">M</button>
+              <button type="button" class="size-btn" data-size="L">L</button>
+              <button type="button" class="size-btn" data-size="XL">XL</button>
+            </div>
+            <button type="button" class="button add-to-cart-btn">В корзину</button>
+          </div>
+        </article>
+
+        <article class="product-card" data-id="fw-03" data-name="Сумка Glam Slam Mini" data-price="55000" data-category="bags" data-sizes="ONE" data-image="">
+          <img src="https://www.maisonmargiela.com/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-margiela-master-catalog/default/dwc10fe562/images/large/SB2WD0076_P5348_T6460_H.jpg?sw=512&q=80" alt="Сумка">
+          <div class="product-body">
+            <span>Сумки</span>
+            <h3>Сумка Glam Slam Mini</h3>
+            <p class="price">55 000 ₽</p>
+            <div class="product-sizes">
+              <button type="button" class="size-btn active" data-size="ONE">ONE</button>
+            </div>
+            <button type="button" class="button add-to-cart-btn">В корзину</button>
+          </div>
+        </article>
+
+        <article class="product-card" data-id="fw-04" data-name="Ботильоны Tabi 70 мм" data-price="69000" data-category="shoes" data-sizes="36,38,40,42" data-image="">
+          <img src="https://www.maisonmargiela.com/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-margiela-master-catalog/default/dw71c83e83/images/large/S51AA0366_M35664_487_E.jpg?sw=1024&q=80" alt="Ботильоны">
+          <div class="product-body">
+            <span>Обувь</span>
+            <h3>Ботильоны Tabi 70 мм</h3>
+            <p class="price">69 000 ₽</p>
+            <div class="product-sizes">
+              <button type="button" class="size-btn" data-size="36">36</button>
+              <button type="button" class="size-btn" data-size="38">38</button>
+              <button type="button" class="size-btn" data-size="40">40</button>
+              <button type="button" class="size-btn" data-size="42">42</button>
+            </div>
+            <button type="button" class="button add-to-cart-btn">В корзину</button>
+          </div>
+        </article>
+
+        <article class="product-card" data-id="fw-05" data-name="Куртка Nylon Replica" data-price="61000" data-category="outerwear" data-sizes="S,M,L" data-image="">
+          <img src="https://www.maisonmargiela.com/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-margiela-master-catalog/default/dw26903987/images/large/S51AM0506_MTN090_912_F.jpg?sw=1024&q=80" alt="Куртка">
+          <div class="product-body">
+            <span>Верхняя одежда</span>
+            <h3>Куртка Nylon Replica</h3>
+            <p class="price">61 000 ₽</p>
+            <div class="product-sizes">
+              <button type="button" class="size-btn" data-size="S">S</button>
+              <button type="button" class="size-btn" data-size="M">M</button>
+              <button type="button" class="size-btn" data-size="L">L</button>
+            </div>
+            <button type="button" class="button add-to-cart-btn">В корзину</button>
+          </div>
+        </article>
+
+        <article class="product-card" data-id="fw-06" data-name="Платье Bias Cut" data-price="48000" data-category="knitwear" data-sizes="XS,S,M" data-image="">
+          <img src="https://www.maisonmargiela.com/dw/image/v2/AAPK_PRD/on/demandware.static/-/Sites-margiela-master-catalog/default/dwc0282597/images/large/S51HP0022_M13153_688_F.jpg?sw=1024&q=80" alt="Платье">
+          <div class="product-body">
+            <span>Трикотаж</span>
+            <h3>Платье Bias Cut</h3>
+            <p class="price">48 000 ₽</p>
+            <div class="product-sizes">
+              <button type="button" class="size-btn" data-size="XS">XS</button>
+              <button type="button" class="size-btn" data-size="S">S</button>
+              <button type="button" class="size-btn" data-size="M">M</button>
+            </div>
+            <button type="button" class="button add-to-cart-btn">В корзину</button>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p style="font-size:12px;color:var(--muted);">Fashion World © <span data-year></span> · <a href="profile.html">Личный кабинет</a></p>
+  </footer>
+  <script src="script.js"></script>
+  <script src="shop.js"></script>
+</body>
+</html>

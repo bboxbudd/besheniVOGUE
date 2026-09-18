@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fashion World | Профиль</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tai+Heritage+Pro:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="announcement">Личный кабинет Fashion World</div>
+  <header class="site-header">
+    <div class="logo">Fashion World</div>
+    <div class="header_links">
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="cart.html">Корзина</a>
+      </nav>
+    </div>
+    <div class="header-actions">
+      <a class="nav-profile" href="profile.html">Профиль</a>
+      <a href="cart.html">Корзина (<span data-cart-count>0</span>)</a>
+    </div>
+    <div class="hamburger" id="hamburger"><p>☰</p></div>
+  </header>
+  <div class="mobile-menu" id="mobileMenu">
+    <aside class="mobile-menu-content">
+      <a href="#" class="close-btn" id="closeMenu">&times;</a>
+      <a href="index.html">Home</a>
+      <a href="catalog.html">Каталог</a>
+      <a class="nav-profile" href="profile.html">Профиль</a>
+      <a href="cart.html">Корзина</a>
+    </aside>
+  </div>
+
+  <main id="profilePage">
+    <section class="section">
+      <div class="section-header">
+        <span>Профиль покупателя</span>
+      </div>
+      <div class="profile-grid">
+        <div class="profile-card">
+          <h2>Данные аккаунта</h2>
+          <form id="profileForm" class="address-form">
+            <label>ФИО
+              <input type="text" id="profileName" required>
+            </label>
+            <label>Email
+              <input type="email" id="profileEmail" required>
+            </label>
+            <label>Телефон
+              <input type="tel" id="profilePhone" required>
+            </label>
+            <button type="submit" class="button">Сохранить профиль</button>
+            <p id="profileStatus" class="promo-msg"></p>
+          </form>
+        </div>
+
+        <div class="profile-card">
+          <h2>Адреса доставки</h2>
+          <div id="addressList"></div>
+
+          <form id="addressForm" class="address-form">
+            <h3>Добавить адрес</h3>
+            <label>Город *
+              <input type="text" id="addrCity" required placeholder="Москва">
+            </label>
+            <label>Улица *
+              <input type="text" id="addrStreet" required placeholder="Тверская">
+            </label>
+            <div class="form-row">
+              <label>Дом *
+                <input type="text" id="addrBuilding" required placeholder="12">
+              </label>
+              <label>Кв.
+                <input type="text" id="addrApt" placeholder="45">
+              </label>
+            </div>
+            <label>Телефон *
+              <input type="tel" id="addrPhone" required placeholder="+7 900 000-00-00">
+            </label>
+            <button type="submit" class="button">Сохранить адрес</button>
+            <p id="addressStatus" class="promo-msg"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p style="font-size:12px;color:var(--muted);">Fashion World © <span data-year></span></p>
+  </footer>
+  <script src="script.js"></script>
+  <script src="shop.js"></script>
+</body>
+</html>
